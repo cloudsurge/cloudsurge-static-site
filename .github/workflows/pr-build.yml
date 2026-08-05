@@ -1,0 +1,30 @@
+name: PR Build Check
+
+on:
+  pull_request:
+    branches: [main]
+
+# Builds the site the same way the deploy workflow does, but never deploys.
+# A red X here should block merging main via branch protection (see README).
+permissions:
+  contents: read
+
+concurrency:
+  group: pr-build-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true # bundle install + cache gems
+
+      - name: Build site
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
