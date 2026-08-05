@@ -1,3 +1,8 @@
+---
+# Front matter (even empty) is what tells Jekyll to run this file through
+# the Sass converter. Output lands at /assets/css/main.css.
+---
+
 @import "lib/normalize";
 @import "lib/fontawesome";
 @import "lib/devicon";

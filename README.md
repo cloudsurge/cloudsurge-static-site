@@ -6,11 +6,9 @@ This is a simple and minimalist template for Jekyll designed for developers that
 
 The Theme features:
 
-- Gulp
-- SASS
+- SASS (compiled by Jekyll)
 - Sweet Scroll
 - Particle.js
-- BrowserSync
 - Font Awesome and Devicon icons
 - Google Analytics
 - Info Customization
@@ -50,15 +48,36 @@ gplus_username:  lorem_ipsum
   - Edit the json data in particle function in app.js
   - Refer to [Particle.js](https://github.com/VincentGarreau/particles.js/) for help
 
-## Running the blog in local
+## Layout
 
-In order to compile the assets and run Jekyll on local you need to follow those steps:
+    _config.yml            site settings
+    _includes/, _layouts/  Liquid templates
+    _sass/                 SCSS partials
+    assets/css/main.scss   stylesheet entrypoint (Jekyll compiles -> main.css)
+    assets/js/             hand-written JS, served as-is
+    assets/fonts/, img/    static assets, copied verbatim
+    index.html             the page
+    CNAME                  custom domain, copied into the build
 
-- Install [NodeJS](https://nodejs.org/)
-- Install [Jekyll](https://jekyllrb.com): `sudo gem install bundler jekyll`
-- Install [Yarn](https://yarnpkg.com/): `npm install -g yarn`
-- Install dependencies: `yarn`
-- Run: `gulp`
+## Running locally
+
+- Install [Ruby](https://www.ruby-lang.org/) 3.1+ and Bundler
+- Install dependencies: `bundle install`
+- Run: `bundle exec jekyll serve` and open <http://localhost:4000>
+
+`serve` watches for changes and rebuilds, including the SCSS.
+
+No Ruby installed? Build in a container instead:
+
+    docker run --rm -v "$PWD":/site -w /site -p 4000:4000 ruby:3.3 \
+      sh -c "bundle install && bundle exec jekyll serve --host 0.0.0.0"
+
+## Deployment
+
+Pushing to `main` triggers `.github/workflows/pages.yml`, which builds the
+site with Jekyll and publishes it to GitHub Pages. Build output is **not**
+committed — do not check in `_site/`, and make content edits to the source
+files above rather than to generated HTML.
 
 ## Questions
 

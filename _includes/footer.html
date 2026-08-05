@@ -1,7 +1,9 @@
 <footer class="footer">
     <p>&copy; {{site.username}}</p>
+    <p>{{site.company_name}} is a company registered in England and Wales</p>
+    <p>Company Number: {{site.company_number}}</p>
     <p>Contact: {{site.email}}</p>
 </footer>
 <script src="{{ "/assets/js/sweet-scroll.min.js" | prepend: site.baseurl }}"></script>
-<script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/assets/js/app.js" | prepend: site.baseurl }}"></script>
 {% include google-analytics.html %}

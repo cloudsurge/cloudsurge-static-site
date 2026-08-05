@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+// The Montserrat webfont is loaded via a <link> in _includes/head.html.
+// A CSS @import here would be emitted after the normalize/fontawesome/devicon
+// rules, and browsers ignore @import once other rules have appeared.
 
 body {
     margin: 0;

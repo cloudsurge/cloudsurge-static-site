@@ -1,0 +1,34 @@
+# Site settings
+title: CloudSurge
+description: CloudSurge Devops Consultancy
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://cloudsurge.co.uk" # the base hostname & protocol for your site
+
+# User settings
+username: CloudSurge
+user_description: Providing Devops Consultancy
+user_title: Devops Consultancy
+email: info@cloudsurge.co.uk
+github_username: cloudsurge
+company_name: CloudSurge Ltd
+company_number: "08960685"
+
+# Google-analytics
+google-analytics:
+  id: ""
+
+# Sass is compiled by Jekyll itself (jekyll-sass-converter), which replaced
+# the old gulp + node-sass pipeline. Partials live in _sass/, and the
+# entrypoint is assets/css/main.scss.
+sass:
+  sass_dir: _sass
+  style: compressed
+  sourcemap: never
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE.txt
+  - particle.jpg
+  - vendor
