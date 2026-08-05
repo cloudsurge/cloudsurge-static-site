@@ -1,13 +1,13 @@
 # Site settings
 title: CloudSurge
-description: CloudSurge Devops Consultancy
+description: CloudSurge Software Delivery Consultancy
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://cloudsurge.co.uk" # the base hostname & protocol for your site
 
 # User settings
 username: CloudSurge
-user_description: Providing Devops Consultancy
-user_title: Devops Consultancy
+user_description: Providing Software Delivery Consultancy
+user_title: Software Delivery Consultancy
 email: info@cloudsurge.co.uk
 github_username: cloudsurge
 company_name: CloudSurge Ltd
