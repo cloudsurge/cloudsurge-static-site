@@ -61,16 +61,20 @@ gplus_username:  lorem_ipsum
 
 ## Running locally
 
-- Install [Ruby](https://www.ruby-lang.org/) 3.1+ and Bundler
-- Install dependencies: `bundle install`
-- Run: `bundle exec jekyll serve` and open <http://localhost:4000>
+    make serve    # http://localhost:4000, rebuilds and reloads on change
+    make build    # build once into _site/
+    make clean    # remove build output and caches
 
-`serve` watches for changes and rebuilds, including the SCSS.
+The Makefile uses a native Ruby toolchain if `bundle` is on your PATH, and
+otherwise runs everything in a `ruby:3.3` container — so Docker alone is
+enough, no local Ruby needed. Gems are cached in `vendor/bundle`.
 
-No Ruby installed? Build in a container instead:
+To drive Jekyll directly instead:
 
-    docker run --rm -v "$PWD":/site -w /site -p 4000:4000 ruby:3.3 \
-      sh -c "bundle install && bundle exec jekyll serve --host 0.0.0.0"
+    bundle install
+    bundle exec jekyll serve
+
+The Makefile is local-only; it plays no part in deployment.
 
 ## Deployment
 

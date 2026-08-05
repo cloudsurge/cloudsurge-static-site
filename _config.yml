@@ -26,6 +26,7 @@ sass:
   sourcemap: never
 
 exclude:
+  - Makefile
   - Gemfile
   - Gemfile.lock
   - README.md
