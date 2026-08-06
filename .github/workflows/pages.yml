@@ -14,8 +14,8 @@ permissions:
 
 # Let a running deploy finish rather than cancelling it mid-publish.
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true 
 
 jobs:
   build:
@@ -32,7 +32,7 @@ jobs:
         id: pages
 
       - name: Build site
-        run: bundle exec jekyll build
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}
         env:
           JEKYLL_ENV: production
 
@@ -47,3 +47,5 @@ jobs:
     steps:
       - uses: actions/deploy-pages@v5
         id: deployment
+        with:
+          timeout: 600000      # 10 minutes waiting budget for Pages
