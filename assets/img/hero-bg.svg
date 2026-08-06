@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f1520"/>
+      <stop offset="55%" stop-color="#1a222c"/>
+      <stop offset="100%" stop-color="#242f3d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#3d5a80" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#3d5a80" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <rect width="1920" height="1080" fill="url(#glow)"/>
+
+  <!-- soft cloud silhouettes -->
+  <g fill="#ffffff" opacity="0.04">
+    <path d="M120 260c-40 0-72 32-72 72s32 72 72 72h380c48 0 88-40 88-88 0-44-34-80-77-87-10-56-59-98-118-98-58 0-107 42-117 98-4 0-8-1-12-1-42 0-76 34-76 76z"/>
+    <path d="M1380 700c-52 0-94 42-94 94s42 94 94 94h480c62 0 112-50 112-112 0-57-43-104-98-111-13-72-76-126-152-126-75 0-138 54-151 126-5 0-10-1-15-1-54 0-84 30-84 30z"/>
+  </g>
+  <g fill="#ffffff" opacity="0.05">
+    <path d="M1500 160c-34 0-62 28-62 62s28 62 62 62h320c40 0 74-34 74-74 0-37-29-68-65-73-9-47-49-82-98-82-49 0-89 35-98 82-3 0-7-1-10-1-35 0-64 12-64 12z"/>
+  </g>
+
+  <!-- distributed network of nodes representing cloud infrastructure -->
+  <g stroke="#9fb8d9" stroke-width="1" opacity="0.18">
+    <line x1="180" y1="180" x2="420" y2="320"/>
+    <line x1="420" y1="320" x2="720" y2="240"/>
+    <line x1="420" y1="320" x2="560" y2="560"/>
+    <line x1="720" y1="240" x2="980" y2="360"/>
+    <line x1="980" y1="360" x2="1260" y2="220"/>
+    <line x1="980" y1="360" x2="1120" y2="600"/>
+    <line x1="1260" y1="220" x2="1560" y2="300"/>
+    <line x1="1120" y1="600" x2="1420" y2="700"/>
+    <line x1="1420" y1="700" x2="1720" y2="620"/>
+    <line x1="560" y1="560" x2="820" y2="760"/>
+    <line x1="820" y1="760" x2="1120" y2="600"/>
+    <line x1="180" y1="180" x2="80" y2="440"/>
+    <line x1="1560" y1="300" x2="1780" y2="180"/>
+    <line x1="1720" y1="620" x2="1860" y2="820"/>
+  </g>
+  <g fill="#cfe0f5" opacity="0.35">
+    <circle cx="180" cy="180" r="4"/>
+    <circle cx="420" cy="320" r="5"/>
+    <circle cx="720" cy="240" r="4"/>
+    <circle cx="980" cy="360" r="6"/>
+    <circle cx="1260" cy="220" r="4"/>
+    <circle cx="1560" cy="300" r="5"/>
+    <circle cx="560" cy="560" r="4"/>
+    <circle cx="1120" cy="600" r="5"/>
+    <circle cx="1420" cy="700" r="4"/>
+    <circle cx="1720" cy="620" r="5"/>
+    <circle cx="820" cy="760" r="4"/>
+    <circle cx="80" cy="440" r="3"/>
+    <circle cx="1780" cy="180" r="3"/>
+    <circle cx="1860" cy="820" r="4"/>
+  </g>
+
+  <!-- bottom contrast fade for text legibility -->
+  <rect width="1920" height="1080" fill="url(#fade)"/>
+  <defs>
+    <linearGradient id="fade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f1520" stop-opacity="0.15"/>
+      <stop offset="60%" stop-color="#0f1520" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0f1520" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+</svg>

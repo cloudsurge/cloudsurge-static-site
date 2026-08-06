@@ -31,5 +31,4 @@ exclude:
   - Gemfile.lock
   - README.md
   - LICENSE.txt
-  - particle.jpg
   - vendor
