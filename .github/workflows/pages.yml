@@ -15,7 +15,7 @@ permissions:
 # Let a running deploy finish rather than cancelling it mid-publish.
 concurrency:
   group: pages-${{ github.ref }}
-  cancel-in-progress: true 
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -48,4 +48,4 @@ jobs:
       - uses: actions/deploy-pages@v5
         id: deployment
         with:
-          timeout: 600000      # 10 minutes waiting budget for Pages
+          timeout: 1800000      # 30 minutes waiting budget for Pages
