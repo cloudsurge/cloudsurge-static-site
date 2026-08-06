@@ -48,4 +48,4 @@ jobs:
       - uses: actions/deploy-pages@v5
         id: deployment
         with:
-          timeout: 1800000      # 30 minutes waiting budget for Pages
+          timeout: 120000      # 2 minutes waiting budget for Pages
