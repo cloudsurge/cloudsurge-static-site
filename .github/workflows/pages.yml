@@ -21,14 +21,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.3"
           bundler-cache: true # bundle install + cache gems
 
-      - uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@v6
         id: pages
 
       - name: Build site
@@ -36,7 +36,7 @@ jobs:
         env:
           JEKYLL_ENV: production
 
-      - uses: actions/upload-pages-artifact@v3 # uploads ./_site by default
+      - uses: actions/upload-pages-artifact@v5 # uploads ./_site by default
 
   deploy:
     needs: build
@@ -45,5 +45,5 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/deploy-pages@v4
+      - uses: actions/deploy-pages@v5
         id: deployment
